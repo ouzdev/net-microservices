@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ouzdev\\desktop\\net-microservices\\platformService\\PlatformService.csproj": {}
+    "C:\\Users\\ouzdev\\Desktop\\net-microservice\\PlatformService\\PlatformService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ouzdev\\desktop\\net-microservices\\platformService\\PlatformService.csproj": {
+    "C:\\Users\\ouzdev\\Desktop\\net-microservice\\PlatformService\\PlatformService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ouzdev\\desktop\\net-microservices\\platformService\\PlatformService.csproj",
+        "projectUniqueName": "C:\\Users\\ouzdev\\Desktop\\net-microservice\\PlatformService\\PlatformService.csproj",
         "projectName": "PlatformService",
-        "projectPath": "C:\\Users\\ouzdev\\desktop\\net-microservices\\platformService\\PlatformService.csproj",
+        "projectPath": "C:\\Users\\ouzdev\\Desktop\\net-microservice\\PlatformService\\PlatformService.csproj",
         "packagesPath": "C:\\Users\\ouzdev\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ouzdev\\desktop\\net-microservices\\platformService\\obj\\",
+        "outputPath": "C:\\Users\\ouzdev\\Desktop\\net-microservice\\PlatformService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -46,6 +46,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[8.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.9, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
