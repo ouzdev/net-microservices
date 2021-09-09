@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -22,7 +23,7 @@ namespace PlatformService
         {
             services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("InMemoryDb"));    
             services.AddScoped<IPlatformRepo,PlatformRepo>();
-            
+            services.AddAutoMapper(typeof(Startup));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

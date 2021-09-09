@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2yaKWvJ4PG+qQ6WkYibLOqJHeNL7zvskgQYBWiFJ3gk4iwW6kAYruwWDf/WfY8Aju719CyxJXl7lZv3f6v5JRg==",
+  "dgSpecHash": "ebxGWbxD1Xh9+xCoxb4SwO+YXymIJwmLye3G4ad+DSmXz57VZXNB3bHGYzQvNN+aJFbLm6jzS1CGVBw5UKkiug==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ouzdev\\source\\vscodeRepos\\net-microservices\\PlatformService\\PlatformService.csproj",
+  "projectFilePath": "C:\\Users\\ouzdev\\source\\vscodeRepos\\net-microservices\\platformservice\\PlatformService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ouzdev\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\ouzdev\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

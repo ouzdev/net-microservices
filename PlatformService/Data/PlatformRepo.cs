@@ -13,12 +13,12 @@ namespace PlatformService.Data
         {
            _context = context; 
         }
-        public void CreatePlatform(Platform plat)
+        public void CreatePlatform(Platform platform)
         {
-            if(plat == null){
-                throw new ArgumentNullException(nameof(plat));
+            if(platform == null){
+                throw new ArgumentNullException(nameof(platform));
             }
-            _context.Platforms.Add(plat);
+            _context.Platforms.Add(platform);
 
         }
 
