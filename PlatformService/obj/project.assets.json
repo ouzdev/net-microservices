@@ -5999,11 +5999,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ouzdev\\source\\vscodeRepos\\net-microservices\\PlatformService\\PlatformService.csproj",
+      "projectUniqueName": "C:\\Users\\ouzdev\\Desktop\\microservices\\net-microservices\\PlatformService\\PlatformService.csproj",
       "projectName": "PlatformService",
-      "projectPath": "C:\\Users\\ouzdev\\source\\vscodeRepos\\net-microservices\\PlatformService\\PlatformService.csproj",
+      "projectPath": "C:\\Users\\ouzdev\\Desktop\\microservices\\net-microservices\\PlatformService\\PlatformService.csproj",
       "packagesPath": "C:\\Users\\ouzdev\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ouzdev\\source\\vscodeRepos\\net-microservices\\PlatformService\\obj\\",
+      "outputPath": "C:\\Users\\ouzdev\\Desktop\\microservices\\net-microservices\\PlatformService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
