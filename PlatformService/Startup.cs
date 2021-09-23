@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using PlatformService.Data;
+using PlatformService.SyncDataService.Http;
 
 namespace PlatformService
 {
@@ -21,8 +22,11 @@ namespace PlatformService
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("InMemoryDb"));    
-            services.AddScoped<IPlatformRepo,PlatformRepo>();
+            services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("InMemoryDb"));
+            services.AddScoped<IPlatformRepo, PlatformRepo>();
+
+            services.AddHttpClient<ICommandDataClient, HttpCommandDataClient>();
+
             services.AddAutoMapper(typeof(Startup));
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -38,7 +42,7 @@ namespace PlatformService
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PlatformService v1"));
-                                            app.UseHttpsRedirection();
+                app.UseHttpsRedirection();
 
             }
             app.UseRouting();
