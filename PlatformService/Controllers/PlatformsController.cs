@@ -1,10 +1,13 @@
 
+using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using PlatformService.Data;
 using PlatformService.Dtos;
 using PlatformService.Models;
+using PlatformService.SyncDataService.Http;
 
 namespace PlatformService.Controllers
 {
@@ -12,11 +15,16 @@ namespace PlatformService.Controllers
     [ApiController]
     public class PlatformsController : ControllerBase
     {
-        private IPlatformRepo _repository;
-        private IMapper _mapper;
+        private readonly ICommandDataClient _commandDataClient;
+        private readonly IPlatformRepo _repository;
+        private readonly IMapper _mapper;
 
-        public PlatformsController(IPlatformRepo repository, IMapper mapper)
+        public PlatformsController(
+            IPlatformRepo repository,
+            IMapper mapper,
+            ICommandDataClient commandDataClient)
         {
+            _commandDataClient = commandDataClient;
             _repository = repository;
             _mapper = mapper;
         }
@@ -28,28 +36,39 @@ namespace PlatformService.Controllers
             return Ok(_mapper.Map<IEnumerable<PlatformReadDto>>(platformItem));
         }
 
-        [HttpGet("{id}", Name="GetPlatformById")]
+        [HttpGet("{id}", Name = "GetPlatformById")]
         public ActionResult<PlatformReadDto> GetPlatformById(int id)
         {
             var platformItem = _repository.GetPlatformById(id);
             if (platformItem != null)
             {
 
-            return Ok(_mapper.Map<PlatformReadDto>(platformItem));
+                return Ok(_mapper.Map<PlatformReadDto>(platformItem));
 
             }
             return NotFound();
         }
 
         [HttpPost]
-        public ActionResult<PlatformReadDto> CreatePlatform(PlatformCreateDto platformCreateDto){
+        public async Task<ActionResult<PlatformReadDto>> CreatePlatform(PlatformCreateDto platformCreateDto)
+        {
             var platformModel = _mapper.Map<Platform>(platformCreateDto);
             _repository.CreatePlatform(platformModel);
             _repository.SaveChanges();
 
             var platformReadDto = _mapper.Map<PlatformReadDto>(platformModel);
 
-            return CreatedAtRoute(nameof(GetPlatformById),new {id = platformReadDto.Id},platformReadDto);
+            try
+            {
+                await _commandDataClient.SendPaltformCommand(platformReadDto);
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+            }
+
+            return CreatedAtRoute(nameof(GetPlatformById), new { id = platformReadDto.Id }, platformReadDto);
         }
     }
 }
