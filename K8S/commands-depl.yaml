@@ -6,7 +6,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: commandse rvice
+      app: commandservice
   template:
     metadata:
       labels:
