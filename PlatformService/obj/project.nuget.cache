@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pFxHgTHZz4R6Rah3c1xUH2QtRg9pnm1X4uanK+TK12SiFuatgbA0bDtEeKngdYVYCId+5Q+ed6pE1UTN+vp5NQ==",
+  "dgSpecHash": "DOuSA+6CmvaXeK8HOheALa9PbYzHtTcsg0SGHPeukU/2pNbGrBfGvur890Bz2XWt+p0HyVil7+PKdyRvVZr/+w==",
   "success": true,
   "projectFilePath": "C:\\Users\\ouzdev\\Desktop\\microservices\\net-microservices\\PlatformService\\PlatformService.csproj",
   "expectedPackageFiles": [
@@ -108,8 +108,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\ouzdev\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.5\\microsoft.netcore.app.host.win-x64.5.0.5.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

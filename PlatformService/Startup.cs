@@ -24,17 +24,17 @@ namespace PlatformService
 
         public void ConfigureServices(IServiceCollection services)
         {
-            //if (_env.IsProduction())
-            //{
+            if (_env.IsProduction())
+            {
                 Console.WriteLine("----> Using SQL Server Database");
                 services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("PlatformsConn")));
 
-            //}
-            //else
-            //{
-                //Console.WriteLine("----> Using InMemoryDb");
-                //services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("InMemoryDb"));
-            //}
+            }
+            else
+            {
+                Console.WriteLine("----> Using InMemoryDb");
+                services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("InMemoryDb"));
+            }
 
             services.AddScoped<IPlatformRepo, PlatformRepo>();
 
@@ -68,7 +68,7 @@ namespace PlatformService
             {
                 endpoints.MapControllers();
             });
-            //PrepDb.PrepPopulation(app,_env.IsProduction());
+            PrepDb.PrepPopulation(app,_env.IsProduction());
         }
     }
 }
