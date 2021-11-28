@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "sU1qbQOFDQ/NhjWEK6psDNa5KF955O6/oZsx4G5bYr8CKdizGCRgDeLRzG9fNZtrFgdQdCQy8YVZ2LijQGUsEw==",
+  "dgSpecHash": "uDnCzJCrUa99sVMjVjm9qppvzFWMd59qvpxbz7YcD9IKoTiYAi+YICvwJihS4LPwL8X2HJs63ClnSq+U1d1GxA==",
   "success": true,
   "projectFilePath": "C:\\Users\\ouzdev\\Desktop\\microservices\\net-microservices\\CommandsService\\CommandsService.csproj",
   "expectedPackageFiles": [
@@ -32,8 +32,7 @@
     "C:\\Users\\ouzdev\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\ouzdev\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\ouzdev\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
-    "C:\\Users\\ouzdev\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
-    "C:\\Users\\ouzdev\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.5\\microsoft.netcore.app.host.win-x64.5.0.5.nupkg.sha512"
+    "C:\\Users\\ouzdev\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }
