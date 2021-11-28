@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CommandService.Data.Abstract;
 using CommandsService.Data.Concrete;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,7 +33,7 @@ namespace CommandsService
             services.AddDbContext<CommandDbContext>(options => 
                 options.UseInMemoryDatabase("InMemoryDb")
             );
-            
+            services.AddScoped<ICommandRepo,CommandRepo>();
             services.AddControllers();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddSwaggerGen(c =>
