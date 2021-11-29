@@ -1,6 +1,6 @@
 namespace CommandService.EventProcessing{
 
-    public interface IEventProcessing{
+    public interface IEventProcessor{
         void ProcessEvent(string message);
     }
 }
