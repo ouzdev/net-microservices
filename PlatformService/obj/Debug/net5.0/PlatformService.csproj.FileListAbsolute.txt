@@ -125,3 +125,4 @@ C:\Users\ouzdev\Desktop\microservices\net-microservices\PlatformService\obj\Debu
 C:\Users\ouzdev\Desktop\microservices\net-microservices\PlatformService\obj\Debug\net5.0\PlatformService.pdb
 C:\Users\ouzdev\Desktop\microservices\net-microservices\PlatformService\obj\Debug\net5.0\PlatformService.genruntimeconfig.cache
 C:\Users\ouzdev\Desktop\microservices\net-microservices\PlatformService\bin\Debug\net5.0\appsettings.Production.json
+C:\Users\ouzdev\Desktop\microservices\net-microservices\PlatformService\bin\Debug\net5.0\RabbitMQ.Client.dll
