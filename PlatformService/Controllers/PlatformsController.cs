@@ -76,7 +76,7 @@ namespace PlatformService.Controllers
             //Send ASync Message
             try
             {
-                 var platformPublishedDto = _mapper.Map<PlatformPublishedDto>(platformCreateDto);
+                 var platformPublishedDto = _mapper.Map<PlatformPublishedDto>(platformReadDto);
                  platformPublishedDto.Event="Platform_Published";
                  _messageBusClient.PublishPlatform(platformPublishedDto);
 

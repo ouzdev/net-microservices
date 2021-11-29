@@ -10,7 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace CommandsService.EventProcessing
 {
-    public class EventProcessor : IEventProcessing
+    public class EventProcessor : IEventProcessor
     {
         private readonly IServiceScopeFactory _scopeFactory;
         private IMapper _mapper;
@@ -27,7 +27,7 @@ namespace CommandsService.EventProcessing
             switch (eventType)
             {
                 case EventType.PlatformPublished:
-                    // To Do
+                    AddPlatform(message);
                     break;
                 default:
                     break;
@@ -55,22 +55,25 @@ namespace CommandsService.EventProcessing
         {
             using (var scope = _scopeFactory.CreateScope())
             {
-                 var repo = scope.ServiceProvider.GetRequiredService<ICommandRepo>();
+                var repo = scope.ServiceProvider.GetRequiredService<ICommandRepo>();
 
-                 var platformPubishedDto = JsonSerializer.Deserialize<PlatformPublishedDto>(platformPublishedMessage);
+                var platformPubishedDto = JsonSerializer.Deserialize<PlatformPublishedDto>(platformPublishedMessage);
 
                 try
                 {
-                     var platform = _mapper.Map<Platform>(platformPubishedDto);
+                    var platform = _mapper.Map<Platform>(platformPubishedDto);
 
-                     if (!repo.ExtarnalPlatformExists(platform.ExtarnalID))
-                     {
-                         repo.CreatePlatform(platform);
-                         repo.SaveChanges();
-                     }
-                     else{
-                         Console.WriteLine("--> Paltform already exists");
-                     }
+                    if (!repo.ExternalPlatformExists(platform.ExtarnalID))
+                    {
+                        repo.CreatePlatform(platform);
+                        repo.SaveChanges();
+                        Console.WriteLine("--> Paltform added");
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("--> Paltform already exists");
+                    }
                 }
                 catch (Exception ex)
                 {
